@@ -1,0 +1,142 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="WebShop.User.User" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <title>WebShop</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="../UserTemplate/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../UserTemplate/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../UserTemplate/css/style.css" rel="stylesheet">
+
+    <script>
+        $(function () {
+            var url = window.location.href;
+
+            $("#navbarCollapse a").each(function () {
+                if (url == (this.href)) {
+                    $(this).addClass("active");
+                }
+            })
+        });
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+      <%--  <%
+            string navclass = string.empty;
+            if (request.url.absoluteuri.tostring().contains("default.aspx"))
+            {
+                navclass = "show";
+            }
+            else
+            {
+                navclass = "position-absolute";
+            }
+        %>--%>
+
+        <!-- Topbar Start -->
+
+        <div class="row align-items-center py-3 px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a href="Default.aspx" class="text-decoration-none">
+                     <img src="../AdminTemplate/assets/images/logo.jpg" alt="homepage" class="light-logo" />
+                   <%-- <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">T</span>Taёжный</h1>--%>
+                </a>
+                <a href="Default.aspx" class="nav-item nav-link active">ГЛАВНАЯ</a>
+            </div>
+            <div class="col-lg-6 col-6 text-left">
+             <%--   <form action="">--%>
+                    <div class="input-group">
+                        <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control" placeholder="Поиск товаров"></asp:TextBox>
+                        
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-transparent text-primary">
+                               
+                                    <asp:ImageButton ID="btnSearch"  runat="server"  OnClick="btnSearch_Click" ImageUrl="~/Images/Search.png" Width="12" />
+                              
+                            </span>
+                        </div>
+                    </div>
+              <%--  </form>--%>
+            </div>
+            <div class="col-lg-3 col-6 text-right">               
+                    <a href="Cart.aspx" class="fas fa-shopping-cart text-primary"></a>
+                <asp:Label ID="QwInCart" runat="server" CssClass="badge"></asp:Label>
+                    <%--<span class="badge">0</span>    --%>
+                    <a href="Profile.aspx" class="fa fa-user"></a>                
+            </div>            
+        </div>
+
+        <%--<div class="container-fluid pt-5">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+   
+              <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="Default.aspx" class="nav-item nav-link active">ГЛАВНАЯ</a>--%>
+                            <%--<a href="Shop.aspx" class="nav-item nav-link">Shop</a>
+                             <a href="Profile.aspx" class="nav-item nav-link">Profile</a>
+                            <a href="ShopDetail.aspx" class="nav-item nav-link">Shop Detail</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="Cart.aspx" class="dropdown-item">Shopping Cart</a>
+                                    <a href="Checkout.aspx" class="dropdown-item">Checkout</a>
+                                </div>
+                            </div>
+                            <a href="Contact.aspx" class="nav-item nav-link">Contact</a>--%>
+                       <%-- </div>
+                    </div>
+        </div>--%>
+          <div class="container-fluid">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+
+   
+
+    </form>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+   
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="../UserTemplate/lib/easing/easing.min.js"></script>
+    <script src="../UserTemplate/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../UserTemplate/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Identity.master.cs" Inherits="WebShop.Identity.Identity" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <title>WebShop</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="../UserTemplate/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../UserTemplate/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../UserTemplate/css/style.css" rel="stylesheet">
+
+    <script>
+        $(function () {
+            var url = window.location.href;
+
+            $("#navbarCollapse a").each(function () {
+                if (url == (this.href)) {
+                    $(this).addClass("active");
+                }
+            })
+        });
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body style ="background-color: #9A616D;">
+    <form id="form1" runat="server" style ="background-color: #9A616D;">
+
+      <%--  <%
+            string navclass = string.empty;
+            if (request.url.absoluteuri.tostring().contains("default.aspx"))
+            {
+                navclass = "show";
+            }
+            else
+            {
+                navclass = "position-absolute";
+            }
+        %>--%>
+
+        <!-- Topbar Start -->
+       <%-- <div class="container-fluid">--%>
+
+        
+        <section class="vh-100" style="background-color: #9A616D;">
+           
+  <div class="container py-5 h-100">
+       <a href="" class="text-decoration-none">
+                    <h1 style="text-align: center;" class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">T</span>ТАЁЖНЫЙ</h1>
+                </a>
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-white text-dark" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+             <%--<section class="vh-100" style="background-color: #9A616D;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-3 d-none d-lg-block">
+                <a href="" class="text-decoration-none">
+                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+                </a>
+          
+            
+
+    <div class="container-fluid">--%>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                   
+            </div>      
+            
+              </div>
+        </div>
+      </div>
+      </div>
+      </section>
+            
+             
+        </form>
+  
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+   
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="../UserTemplate/lib/easing/easing.min.js"></script>
+    <script src="../UserTemplate/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../UserTemplate/js/main.js"></script>
+
+</body>
+</html>
